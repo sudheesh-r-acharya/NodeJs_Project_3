@@ -1,0 +1,46 @@
+<%- include("partials/header") %> <%- include("partials/navbar") %>
+<div class=" bg-info position-relative mt-5 " style="height: 400px">
+<form class="position-absolute top-50 start-50 translate-middle d-flex flex-column" 
+                                                           action="/update/<%= user._id %>" method="post">
+    <input
+    class="p-3"
+     type="text"
+     name="username"
+     value="<%= user.username %>"
+     placeholder="Enter Patient Name"
+    >
+    <input
+    class="p-3"
+     type="number"
+     name="age"
+     value="<%= user.age %>"
+     placeholder="Enter Patient age"
+    >
+    <input
+    class="p-3"
+     type="date"
+     name="dob"
+     value="<%= user.dob %>"
+     placeholder="Date of Birth"
+    >
+    <input
+    class="p-3"
+     type="text"
+     name="condition"
+     placeholder="Enter Patient Condition"
+     value="<%= user.condition %>"
+    >
+    <input
+    class="p-3"
+     type="text"
+     name="Tablet"
+     value="<%= user.Tablet %>"
+     placeholder="Enter Tablets"
+     required
+    >
+    <button class="btn btn-primary" >Update</button>
+</form>
+</div>   
+<%- include("partials/footer") %>
+
+

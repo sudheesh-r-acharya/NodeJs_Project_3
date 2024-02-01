@@ -1,0 +1,16 @@
+<%- include("partials/header") %> <%- include("partials/navbar") %>
+   <div class="p-3 mb-2 b-5 bg-info h-10 text-white" >
+    <h1><%= title %></h1> 
+  </div> 
+  <% users.forEach(function(user){ %>
+    <ul class="list-group">
+        <li class="list-group-item active p-4" aria-current="true">Patient Name  :   <%= user.username %></li>
+        <li class="list-group-item">Patient Age :   <%= user.age %></li>
+        <li class="list-group-item">Patient Dob :   <%= user.dob %></li>
+        <li class="list-group-item">Patient Condition :   <%= user.condition %></li>
+        <li class="list-group-item">Patient Tablets :   <%= user.Tablet %></li>
+    </ul>
+    <a class="btn btn-info mb-2 " href="/update/<%= user._id %>">Update Info</a>
+    <a class="btn btn-info mb-2 " href="/delete/<%= user._id %>">Delete</a>
+  <% }) %>
+<%- include("partials/footer") %>
